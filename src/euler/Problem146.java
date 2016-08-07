@@ -23,7 +23,7 @@ public class Problem146 {
             a[4] = sc.nextInt();
             a[5] = sc.nextInt();
 
-            for (long j = 10; j <= number; j += 10) {
+            for (long j = 10; j < number; j += 10) {
                 long squared = j * j;
                 if (squared % 3 != 1)
                     continue;
