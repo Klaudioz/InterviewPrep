@@ -15,6 +15,7 @@ public class W22s5 {
         for (int i = 1; i <= n; i++)
             set.add(i);
         sets = powerSet(set);
+        //System.out.println(sets.size());
         for (Set varSet : sets)
             map.put(varSet,0L);
         int times = sc.nextInt(); //number queries
@@ -39,7 +40,6 @@ public class W22s5 {
                         if (sets.contains(varSet))
                             map.put(varSet,numberCase1);
                     }
-                    //System.out.println(map);
                     break;
                 case 2:
                     numberCase1 = sc.nextLong(); //value
@@ -54,7 +54,6 @@ public class W22s5 {
                         if (sets.contains(varSet))
                             map.put(varSet,numberCase1^map.get(varSet));
                     }
-                    //System.out.println(map);
                     break;
                 case 3:
                     numberCase2 = sc.next(); //set binary representation
@@ -65,12 +64,18 @@ public class W22s5 {
                     }
                     tempSets = powerSet(tempSet);
                     for (Set varSet : tempSets) {
-                        if (sets.contains(varSet) && varSet.size()>0)
+                        if (sets.contains(varSet) && varSet.size()>0) {
+                            //System.out.println("varset: "+varSet);
                             System.out.println(map.get(varSet));
+                        }
                     }
                     break;
             }
+            //System.out.println(map);
+            tempSet.clear();
+            tempSets.clear();
         }
+        sc.close();
     }
 
     public static Set<Set<Integer>> powerSet(Set<Integer> originalSet) {
