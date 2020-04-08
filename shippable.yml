@@ -9,3 +9,5 @@ jobs:
       - TASK:
         - script: export MSG=THIS_IS_A_TEST
         - script: unameeeeeeeeeee -a
+git:
+   submodules: false
