@@ -2,7 +2,7 @@ language: none
 
 jobs:
   - name: container_single_task
-    type: runSh
+    type: runCLI
     on_failure:
       - script: echo ${MSG}
     steps:
