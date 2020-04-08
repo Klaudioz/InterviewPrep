@@ -1,0 +1,8 @@
+jobs:
+  - name: container_single_task
+    type: runSh
+    steps:
+      - TASK:
+          name: task
+          script:
+            - uname -a
