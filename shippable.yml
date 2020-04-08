@@ -1,3 +1,5 @@
+language: none
+
 jobs:
   - name: container_single_task
     type: runSh
