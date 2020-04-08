@@ -3,8 +3,11 @@ language: none
 jobs:
   - name: container_single_task
     type: runSh
+    on_failure:
+        - script: echo ${MSG}
     steps:
       - TASK:
           name: task
           script:
-            - uname -a
+            - script: export MSG="ON_FAILURE IS GETTING PARAMETERS"
+            - unameeeeeeeeeee -a
