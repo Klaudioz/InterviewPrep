@@ -4,10 +4,10 @@ jobs:
   - name: container_single_task
     type: runSh
     on_failure:
-        - script: echo ${MSG}
+      - script: echo ${MSG}
     steps:
       - TASK:
           name: task
           script:
-            - script: export MSG="ON_FAILURE IS GETTING PARAMETERS"
+            - script: export MSG=THIS_IS_A_TEST
             - unameeeeeeeeeee -a
